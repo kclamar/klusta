@@ -97,7 +97,7 @@ class ArrayStore(object):
             dtype = data.dtype
             if not data.size:
                 return
-            assert dtype != np.object
+            assert dtype != object
             np.save(path, data)
         # debug("Store {}.".format(path))
 

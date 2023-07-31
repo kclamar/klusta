@@ -355,8 +355,8 @@ class FloodFillDetector(object):
         self._channels_per_group = channels_per_group
 
     def __call__(self, weak_crossings=None, strong_crossings=None):
-        weak_crossings = np.asarray(weak_crossings, np.bool)
-        strong_crossings = np.asarray(strong_crossings, np.bool)
+        weak_crossings = np.asarray(weak_crossings, bool)
+        strong_crossings = np.asarray(strong_crossings, bool)
         all_channels = sorted([item for sublist
                               in self._channels_per_group.values()
                               for item in sublist])

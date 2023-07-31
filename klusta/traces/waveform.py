@@ -110,7 +110,7 @@ class WaveformExtractor(object):
         s_min = comp.s_min
 
         # Binary mask. shape: (nc,)
-        masks_bin = np.zeros(nc, dtype=np.bool)
+        masks_bin = np.zeros(nc, dtype=bool)
         masks_bin[np.unique(comp_ch)] = 1
 
         # Find the peaks (relative to the start of the chunk). shape: (nc,)
